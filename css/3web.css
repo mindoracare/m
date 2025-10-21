@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+/* ===== Sidebar Style ===== */
+
+header {
+  background: #3aa8fb;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d5e0d5;
+  position: relative;
+  border-radius: 50px;
+  margin-top: 20px;
+  margin-left: 20px;  
+  margin-right: 20px;
+ 
+  
+}
+
+header h2 {
+  margin: 0 auto;
+  font-size: 18px;
+  color: #ffffff;
+  
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #fafafa;
+  transition: 0.3s;
+    position: absolute;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Sidebar Container */
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 260px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.15);
+  transition: left 0.3s ease;
+  overflow-y: auto;
+  padding-bottom: 40px;
+  z-index: 999;
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+/* Profil User */
+.profile {
+  text-align: center;
+  padding: 20px;
+}
+
+.profile img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile h3 {
+  margin-top: 10px;
+  color: #0675ca;
+  font-size: 16px;
+}
+
+.profile p {
+  font-size: 12px;
+  color: gray;
+}
+
+/* Menu Sidebar */
+.menu-section {
+  padding: 10px 20px;
+
+}
+
+.menu-section h4 {
+  color: #0675ca;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.menu-section a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0675ca;
+  padding: 8px 0;
+  transition: 0.3s;
+}
+
+.menu-section a span {
+  margin-right: 10px;
+}
+
+.menu-section a:hover {
+  background: #e6f4ea;
+  border-radius: 6px;
+  padding-left: 8px;
+  
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #e3e3e3;
+  margin: 10px 0;
+}
+
+/* Isi utama */
+.content {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #3aa8fb;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+  border-top: 1px solid #ccc;
+}
+
+.bottom-nav .nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+}
+
+/* 🟩 kotak pembungkus ikon, tingginya sama untuk semua */
+.bottom-nav .icon-box {
+  width: 40px;     /* lebar area ikon */
+  height: 40px;    /* tinggi area ikon (sama untuk semua) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+/* 🟩 gambar diatur agar proporsional dalam kotak */
+.bottom-nav .icon-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* jaga proporsi */
+}
+.bottom-nav .nav-item.active {
+  background-color: #3aa8fb;
+}
+/* Menyusun konten di tengah layar */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Tengah secara vertikal */
+  align-items: center;      /* Tengah secara horizontal */
+  height: calc(100vh - 120px); /* tinggi layar dikurangi header dan bottom nav */
+  text-align: center;
+}
+
+/* Styling button X */
+.content h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #1b5e20;
+}
+
+.content p {
+  font-size: 16px;
+  color: #444;
+}
+.close-btn {
+  font-size: 22px;
+  color: #333;
+  cursor: pointer;
+  padding: 10px 15px;
+  text-align: right;
+  display: block;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: #ff4b4b;
+}
+.bottom-nav a:hover {
+  color: #41a8e8;
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
